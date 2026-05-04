@@ -1,0 +1,28 @@
+@startuml foco
+
+class Usuario 
+
+class Foco {
+-EstadoFoco estado
++ Encender()
++ Apagar()
++EstadoFoco
+ LeerEstado() : EstadoFoco
+}
+
+class EstadoFoco
+class SerieFoco {
+    Focos focos[10]
+    +MostrarFoco()
+    +EncenderFoco()
+    +ApagarFoco()
+
+}
+
+Usuario o-- Foco
+Foco *-- EstadoFoco
+EstadoFoco --|> Texto
+SerieFoco "1" *-- "10" Foco 
+Usuario o-- SerieFoco 
+
+@enduml
