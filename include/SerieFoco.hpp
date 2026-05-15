@@ -5,8 +5,8 @@ class SerieFocos
 private:
  Foco focos[10]
 public:
-SerieFoco()  {}
-SerieFocos() {}
+SerieFocos();  {}
+SerieFocos(); {}
  void MostarFocos() {
     for (auto &&f : focos)
     {
@@ -26,3 +26,4 @@ SerieFocos() {}
         f.Encender();
     }
 };
+}
